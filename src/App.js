@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AppF from './AppF'
-import Question from './question'
+import Questions from './question'
 
 const Home = () => {
   return <h2>Home</h2>
-}
-const About = () => {
-  return <h2>About</h2>
 }
 
 const Navigation = () => {
@@ -23,9 +20,6 @@ const Navigation = () => {
         <li>
           <Link to="/question">Question</Link>
         </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
       </ul>
     </nav>
   )
@@ -36,14 +30,11 @@ const App = () => {
     <Router>
         <Navigation />
       <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
         <Route path="/colored">
           <AppF />
         </Route>
         <Route path="/question">
-          <Question />
+          <Questions />
         </Route>
         <Route path="/">
           <Home />
